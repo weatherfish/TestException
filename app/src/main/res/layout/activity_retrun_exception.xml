@@ -3,23 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".ReturnExceptionActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/sample_text"
+    <Button
+        android:id="@+id/ret1"
+        android:text="ret1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/return_exception"
-        android:text="return_exception"
+        android:id="@+id/ret2"
+        android:text="ret2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/error"
-        android:text="error"
+        android:id="@+id/ret3"
+        android:text="ret3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/ret4"
+        android:text="ret4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

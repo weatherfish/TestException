@@ -3,23 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".VMErrorActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/sample_text"
+    <Button
+        android:id="@+id/stackOverFlow"
+        android:text="stackOverFlow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/return_exception"
-        android:text="return_exception"
+        android:text="outOfMemory"
+        android:id="@+id/outOfMemory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/error"
-        android:text="error"
+        android:id="@+id/threadOutOfMemory"
+        android:text="threadOutOfMemory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

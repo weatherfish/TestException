@@ -1,5 +1,6 @@
 package com.felix.test.exp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -9,9 +10,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Example of a call to a native method
         sample_text.text = stringFromJNI()
+
+        return_exception.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ReturnExceptionActivity::class.java))
+        }
+
+        error.setOnClickListener {
+            startActivity(Intent(this@MainActivity, VMErrorActivity::class.java))
+        }
     }
 
     /**
@@ -21,8 +28,6 @@ class MainActivity : AppCompatActivity() {
     external fun stringFromJNI(): String
 
     companion object {
-
-        // Used to load the 'native-lib' library on application startup.
         init {
             System.loadLibrary("native-lib")
         }
