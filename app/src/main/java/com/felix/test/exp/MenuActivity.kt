@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MenuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,11 +13,15 @@ class MainActivity : AppCompatActivity() {
         sample_text.text = stringFromJNI()
 
         return_exception.setOnClickListener {
-            startActivity(Intent(this@MainActivity, ReturnExceptionActivity::class.java))
+            startActivity(Intent(this@MenuActivity, ReturnExceptionActivity::class.java))
         }
 
         error.setOnClickListener {
-            startActivity(Intent(this@MainActivity, VMErrorActivity::class.java))
+            startActivity(Intent(this@MenuActivity, VMErrorActivity::class.java))
+        }
+
+        lost.setOnClickListener{
+            startActivity(Intent(this@MenuActivity, LostActivity::class.java))
         }
     }
 
